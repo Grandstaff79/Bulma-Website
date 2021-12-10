@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company website with Bulma</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js">
+    </script>
+
+</head>
+<body>
+<header class="section has-background-link py-4 has-text-white">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <span class="icon">
+                     <i class="fa fa-envelope" ></i>
+                </span>
+                email@company.com
+            </div> 
+            <div class="column">
+                <span class="icon">
+                     <i class="fas fa-phone-volume"></i>
+                </span>
+                800-867-5309
+            </div> 
+            <div class="column has-text-right-tablet">
+                <span class="icon">
+                      <i class="fas fa-headphones-alt"></i>
+                </span>
+                Support
+            </div> 
+        </div>
+    </div>
+
+</header>
+    <section class="section" id="hero">
+        <div class="container">
+            <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                  </a>
+              
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start">
+                    <a class="navbar-item has-text-white">
+                      Home
+                    </a>
+              
+                    <a class="navbar-item has-text-white">
+                      Services
+                    </a>
+              
+                    <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link has-text-white">
+                        More
+                      </a>
+              
+                      <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                          About
+                        </a>
+                        <a class="navbar-item">
+                          Jobs
+                        </a>
+                        <a class="navbar-item">
+                          Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                          Report an issue
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-info">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-warning">
+                          Log in
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="columns pt-6">
+                  <div class="column mt-6">
+                    <span class="icon has-text-warning">
+                        <i class="far fa-chart-bar fa-lg"></i>
+                    </span>
+                    <h1 class="is-size-1 has-text-black">
+                        Web Design<br/>
+                        & App Development
+                    </h1>
+                    <p class="has-text-black">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos assumenda in quas maxime illum consectetur velit! 
+                        Sapiente eos consequatur repellendus accusantium ex nobis tempora possimus! Facilis ea reiciendis dignissimos debitis
+                    </p>
+                    <button class="button is-warning mt-4">
+                        Learn More
+                    </button>
+                  </div>
+                    <div class="column mt-6">
+                        <img src="img/hero.png" alt="hero">
+                    </div>
+              </div>
+        </div>
+    </section>
+    <section class="section" id="services">
+    </section>
+    <section class="section" id="contact">
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+    </script>
+</body>
+</html>
